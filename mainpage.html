@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="ques.css">
+    <style>
+        body {
+            margin: 0;
+            height: 100%;
+        }
+
+        .image {
+            background-color: rgb(75, 104, 121);
+            justify-content: center;
+            text-align: center;
+        }
+
+        .heading {
+            background-color: yellowgreen;
+            text-align: center;
+            padding: .2px;
+            margin-top: 10px;
+            display: flex;
+            justify-content: space-between;
+            padding-left: 400px;
+            padding-right: 200px;
+        }
+
+        .card {
+            display: flex;
+            justify-content: center;
+        }
+
+        .question1 {
+            width: 500px;
+            background-color: rgb(135, 204, 225);
+            margin: 5px;
+            height: 53px;
+            border-radius: 20px 20px 0px 0px;
+        }
+
+        .ques {
+            background-color: rgb(141, 129, 152);
+        }
+
+        .optional {
+            background-color: yellowgreen;
+            width: 300px;
+            margin: 5px;
+            height: 300px;
+            border-radius: 20px 20px 0px 0px;
+        }
+
+        .photo {
+            height: 120px;
+            width: 120px;
+            background-color: aliceblue;
+            margin: 15px;
+        }
+
+        .pic > img{
+            height: 120px;
+            width: 120px;
+        }
+
+        .signature {
+            height: 40px;
+            width: 120px;
+            background-color: aliceblue;
+            margin-top: 15px;
+        }
+        .signature > img{
+            height: 40px;
+            width: 120px;
+        }
+        .footer {
+            background-color: rgb(112, 162, 162);
+            display: flex;
+            justify-content: space-between;
+            padding-left: 50px;
+            padding-top: 15px;
+            margin-top: 218px;
+        }
+
+        .camera{
+            text-align: center;
+        }
+        .camera > p{
+            font-weight: bold;
+            font-size: 23px;
+            background-color: rgb(83, 165, 42);
+            margin: 0;
+            border-radius: 10px;
+        }
+        #video{
+            width: 200px;
+            height: 200px;
+            border-style: ridge;
+            background-color: rgb(148, 148, 231);
+            border-radius: 10px;
+        }
+        .option {
+            background-color: rgb(113, 93, 132);
+            height: 223px;
+            margin-top: 165px;
+        }
+
+        .q2 {
+            justify-content: space-between;
+            padding-top: 110px;
+            height: 30px;
+            display: flex;
+        }
+
+        .btn {
+            justify-content: space-between;
+            padding: 15px;
+        }
+
+        #btn1 {
+            background-color: yellow;
+            margin: 10px;
+        }
+
+        #btn2 {
+            background-color: blueviolet;
+            margin: 10px;
+        }
+
+        #btn3 {
+            background-color: rgb(0, 255, 26);
+            margin: 10px;
+        }
+
+        #btn4 {
+            background-color: rgb(255, 42, 0);
+            margin: 10px;
+        }
+
+        #timer {
+            font-weight: bold;
+            font-family: Arial;
+            height: 20px;
+        }
+
+        .settime {
+            background-color: beige;
+            height: 40px;
+            margin: 5px;
+            width: 150px;
+            border-radius: 5px;
+            border-style: solid;
+            display: flex;
+            justify-content: space-between;
+            padding: 2px;
+
+        }
+
+        .start >p {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        #countdown {
+            margin: 0;
+        }
+
+        h4 {
+            margin: 0;
+        }
+        .dot {
+        height: 15px;
+        width: 15px;
+        background-color: rgb(235, 12, 12);
+        border-radius: 50%;
+        display: inline-block;
+        text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="xyz">
+        <div class="header">
+            <div class="image">
+                <img src="asset/ssc img.png">
+            </div>
+            <div class="heading">
+                <div class="heading2">
+                    <h3>SIMPLE SUBJECT(Please click on the Preview Submit button to move the Main Exam)</h3>
+                </div>
+                <div class="settime">
+                    <span id="timer">Timer</span>
+                    <div class="start">
+                        <h4>Min:Sec<h4>
+                        <p id="countdown"> 10:00</p>
+                    </div>
+                </div>   
+            </div>
+        </div>
+        <div class="card">
+            <div class="question1">
+                <div class="header1">
+                    <p class="qsn">Text Size</p>
+                </div>
+            <div class="maindiv">
+                <div class="innerdiv">
+                    <p class="question">Question comes here</p>   
+                    <ul>
+                        <li>
+                            <input type="radio" name="answer" id="ans1" class="answer">
+                            <label for="ans1" id="option1">Answer option</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="answer" id="ans2" class="answer">
+                            <label for="ans2" id="option2">Answer option</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="answer" id="ans3" class="answer">
+                            <label for="ans3" id="option3">Answer option</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="answer" id="ans4" class="answer">
+                            <label for="ans4" id="option4">Answer option</label>
+                        </li>
+                    </ul>
+                </div>
+                <div id="showScore" class="scoreArea" ></div>
+            </div>
+            </div>
+            <div class="optional">
+                <div class="photo">
+                    <div class="pic">
+                        <img src="asset/IMG_20211011_111642.jpg" alt="Photo">
+                    </div>
+                    <div class="signature">
+                        <img src="asset/Q_1633955436495.jpg" alt="Signature">
+                    </div>
+
+                </div>
+                <div class="option">
+                    <div class="q1">
+                        <h3>Number of Questions</h3>
+                    </div>
+                    <div class="colorbtn">
+                        <button type="button">Q.01</button>
+                        <button type="button">Q.02</button>
+                        <button type="button">Q.03</button>
+                        <button type="button">Q.04</button>
+                        <button type="button">Q.05</button>
+                    </div>
+                    <div class="q2">
+                        <button type="button" class="btn" id="btn1">0</button>
+                        <button type="button" class="btn" id="btn2">0</button>
+                        <button type="button" class="btn" id="btn3">0</button>
+                        <button type="button" class="btn" id="btn4">0</button>
+                    </div>
+                </div>
+            </div>
+            <div class="camera">
+                <video id="video" autoplay="autopaly"></video>
+                
+                <p> <span class="dot"></span> Live Recording</p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="back">
+                 <img id="back1" src="asset/Back-Question.jpeg" alt="back">
+            </div>
+            <div class="farword">
+                <img id="imge" class="image" src="asset/Next-Question.jpeg" alt="next">
+            </div>
+            <div class="tag">
+                <img src="asset/Tag.jpeg" alt="tag">
+            </div>
+            <div class="erase">
+                <img src="asset/erase.jpg" alt="erase">
+            </div>
+            <div class="erase">
+                <img src="asset/Preview-Submit.jpeg" alt="Preview">
+            </div>
+        </div>
+    </form>
+    <script>
+        var minute = 9;
+        var second = 60;
+        setInterval(function () {
+            if (minute == 0 && second == 1) {
+                document.getElementById("countdown").innerHTML = "00:00";
+            }
+            else {
+                second--;
+                if (second == 0) {            
+                    minute--;
+                    second = 60;              
+                    if (minute == 0) {           
+                        minute = minute;
+                    }
+                }
+                document.getElementById("countdown").innerHTML = minute + ":" + second;
+            }
+        }, 1000)
+        var video = document.getElementById("video");
+        navigator.mediaDevices.getUserMedia({ video: true }) .then(function (stream) {
+            video.srcObject = stream;   
+        })
+    
+        // question forword
+
+        const quizDB =[
+            {
+                question: "Q1: what is the full form of html?",
+                a:"Hello to my land",
+                b:"Hello to my jk",
+                c:"Hello to my mgmg",
+                d:"Hype",
+                ans: "ans4"
+            },
+            {
+                question: "Q2: Which type of JavaScript language is",
+                a:"Object-Oriented",
+                b:"Object-Based",
+                c:"Assembly-language",
+                d:"High-level",
+                ans: "ans1"
+            },
+            {
+                question: "Q3: The function and var are known as:?",
+                a:"Keywords",
+                b:"Data types",
+                c:"Declaration statements",
+                d:"Prototypes",
+                ans: "ans4"
+            },
+            {
+                question:"Q4: JavaScript is the programming language of the____ ",
+                a:"Desktop",
+                b:"Mobile",
+                c:"Web",
+                d:"Server",
+                ans: "ans3"
+            },
+            {
+                question:"Q5: Which type of JavaScript language is _____?",
+                a:"Object-oriented",
+                b:"Object-based",
+                c:"Functional programming",
+                d:"All of the above",
+                ans: "ans3"
+            },
+            {
+                question:"Q6: JavaScript ignores?",
+                a:"newlines",
+                b:"tabs",
+                c:"spaces",
+                d:"All of the above",
+                ans: "ans3"
+            },
+        ];
+
+        const question =document.querySelector('.question');
+        const option1 =document.querySelector('#option1');
+        const option2 =document.querySelector('#option2');
+        const option3 =document.querySelector('#option3');
+        const option4 =document.querySelector('#option4');
+        const submit =document.querySelector('#img');
+
+        const answers = document.querySelectorAll('.answer');
+        const showScore = document.querySelector('#showScore');
+        
+        let questionCount = 0;
+        let score = 0;
+
+        const loadQuestion =() => {
+            const questionlist = quizDB[questionCount];
+            question.innerText = questionlist.question;
+
+            option1.innerText = questionlist.a;
+            option2.innerText = questionlist.b;
+            option3.innerText = questionlist.c;
+            option4.innerText = questionlist.d;
+        }
+
+        loadQuestion();
+
+        const getCheckAnswer = () => {
+            let answer;
+            answers.forEach((curAnsElem) => {
+                if(curAnsElem.checked){
+                    answer == curAnsElem.id;
+                }
+            });
+            return answer;
+        };
+
+        const deselectAll = () => {
+            answers.forEach((curAnsElem) => curAnsElem.checked = false);
+                
+                }
+
+        imge.addEventListener('click', () =>{
+            const checkedAnswer = getCheckAnswer();
+            console.log(checkedAnswer);
+            if(checkedAnswer == quizDB[questionCount].ans){
+                score++;
+            };
+
+            questionCount++;
+
+            deselectAll();
+
+            if(questionCount < quizDB.length){
+                loadQuestion();
+            }
+        })
+
+        back1.addEventListener('click', () => {
+            questionCount = questionCount-1;
+            console.log(questionCount);
+            loadQuestion();
+        })
+    </script>
+</body>
+
+</html>

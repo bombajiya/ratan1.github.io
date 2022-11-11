@@ -1,0 +1,24 @@
+.maindiv{
+    display: grid;
+    background-color: beige;
+}
+
+.innerdiv{
+    background-color: rgb(34, 110, 125);
+    padding: 1rem;
+    box-shadow: 0 1rem -0.7rem rgb(0, 0, 0 0.4);
+    height: 28.5vw;
+}
+.innerdiv p{
+    font-size: 2.5rem;
+    font-weight: 400;
+    margin: 1rem 0 4rem 0;
+}
+.innerdiv li{
+     font-size: 2rem;
+     margin-top: 1.5rem;
+     list-style: none;
+}
+input{
+    cursor: pointer;
+}

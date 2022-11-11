@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .testimonials {
+            justify-content: center;
+            text-align: center;
+            height: 100%;
+            align-items: center;
+            height: 80vh;
+        }
+
+        .header {
+            background-color: rgb(75, 104, 121);
+        }
+
+        .modal {
+            display: none;
+        }
+
+        .modal-container {
+            width: 400px;
+            background-color: rgb(82, 191, 205);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 10px;
+        }
+
+        .modal-header {
+            padding: 10px;
+            height: 60px;
+            background-color: rgb(214, 214, 214);
+        }
+
+        .modal-header>div {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header>img {
+            padding-top: 5px;
+            padding-left: 590px;
+        }
+
+        .card {
+            width: 600px;
+            height: 350px;
+            box-shadow: 0px 0px 14px -5px #413d3d;
+            border-radius: 10px;
+            background: #f7f9fd;
+            box-shadow: #413d3d;
+            text-align: center;
+            font-family: Arial;
+            margin-left: 435px;
+
+        }
+
+        .cardbody>a {
+            text-decoration: none;
+            padding-right: 17rem;
+        }
+
+        .cardbody>h2 {
+            font-weight: 100;
+        }
+
+        .cardbody>input {
+            height: 45px;
+            border-radius: 5px;
+            width: 350px;
+            font-family: Arial;
+            font-size: 2.3vh;
+        }
+
+        .create span {
+            justify-content: center;
+            text-align: center;
+            padding-top: 1rem;
+        }
+
+        .create>button {
+            height: 35px;
+            width: 80px;
+            border-radius: 5px;
+            background-color: #059411;
+            font-size: larger;
+            cursor: pointer;
+            border-style: none;
+        }
+
+        .create {
+            justify-content: space-between;
+            display: flex;
+            margin-top: 40px;
+            padding-left: 17.5rem;
+            position: absolute;
+        }
+
+        .cardhead {
+            height: 50px;
+            padding-top: 1rem;
+            background-color: #385ed2;
+            border-radius: 10px 10px 0px 0px;
+            margin-top: 50px;
+        }
+
+        #nextbtn:hover {
+            background: #0ce329;
+        }
+
+        .textarea {
+            padding-top: 1.5rem;
+            display: flex;
+        }
+
+        .textarea>input {
+            width: 230px;
+            height: 30px;
+            border-radius: 5px;
+            padding-left: 5px;
+        }
+
+        .txt>input {
+            width: 230px;
+            height: 30px;
+            border-radius: 5px;
+            padding-left: 5px;
+        }
+
+        .pass {
+            display: flex;
+            justify-content: center;
+        }
+
+        .pass2 {
+            justify-content: center;
+            text-align: center;
+            padding-top: 10px;
+            padding-left: 5px;
+        }
+
+        .pass2>input {
+            height: 30px;
+            width: 230px;
+            border-radius: 5px;
+        }
+
+        span {
+            color: #645b5b;
+        }
+
+        .logo>img {
+            height: 100px;
+            width: 100px;
+            display: flex;
+        }
+
+        .txt {
+            padding-left: 68px;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        h3 {
+            font-family: Arial;
+        }
+
+        #msg3 {
+            position: absolute;
+        }
+        #msg2 {
+            position: absolute;
+        }
+        #msg3 {
+            position: absolute;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="modal" id="box">
+        <div class="modal-container">
+            <div class="modal-header">
+                <div>
+                    <h1>Condidate details</h1>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="examname">
+                    <h3>Exam Name-Softsynth online CBT test</h3>
+                </div>
+                <div class="studentname">
+                    <h3>Exam Center- Softsynth solution faridabad</h3>
+                </div>
+                <div class="studentname">
+                    <h3>Medium- English/Hindi</h3>
+                </div>
+                <div class="studentname">
+                    <h3>Student Name- RATAN KUMAR</h3>
+                </div>
+                <div class="roll">
+                    <h3>Roll- <span id="rn" onclick="validation"></span></h3>
+                </div>
+                <div class="shift">
+                    <h3>Shift-2nd</h3>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button><a href="details.html"> Ok</a></button>
+                <button type="button" class="close" onclick="closeModal()">Close</button>
+            </div>
+        </div>
+    </div>
+    <form>
+        <div class="header">
+            <img src="asset/ssc img.png">
+        </div>
+        <div class="testimonials">
+            <div class="card">
+                <div class="cardbody">
+                    <div class="cardhead">
+                        <h2>Condidate Login</h2>
+                    </div>
+
+                    <div class="textarea">
+                        <div class="logo">
+                            <img src="asset/softsynth logo.jpg" alt="softsynth">
+                        </div>
+                        <div class="txt">
+                            <span>Roll No.</span>
+                            <input type="text" id="roll" name="username" placeholder="Enter your roll no." oninput="removeMsg()"><br>
+                            <p id="msg1"></p>
+                            <small id="roll-error"></small>
+                        </div>
+                    </div>
+                    <div class="pass">
+                        <div class="pass1">
+                            <span>Password</span><br>
+                            <span>(Date of Birth)</span><br>
+                            <span>(DDMMYY)</span>
+                        </div>
+                        <div class="pass2">
+                            <input type="text" id="password" name="username" placeholder="Enter your password" onkeypress="removeMsg()">
+                            <p id="msg2"></p>
+                            <p id="msg3"></p>
+                            <p><small id="password-error"></small></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="create">
+                    <button type="button" class="nxtbtn" id="nextbtn" onClick="validation()">Submit</button>
+                </div>
+            </div>
+        </div>
+    </form>
+    <script>
+        let show = document.querySelector(".nxtbtn");
+        let close = document.querySelectorAll(".close");
+        console.log(close);
+        show.addEventListener('click', function () {
+            document.getElementById('box').style.display = "block";
+        });
+        function closeModal() {
+            document.getElementById('box').style.display = "none";
+        }
+
+        function validation() {
+            let roll = document.getElementById("roll").value;
+            let password = document.getElementById("password").value;
+
+            if (roll != null && roll != "" && password != "" && password != null)
+                {
+                    if(password.length!=8){
+                        document.getElementById("msg2").textContent = "Password length should be min 8 char ";
+                        document.getElementById("msg2").style.color = "red";
+                    }
+                    if(roll.length!=10){
+                        document.getElementById("msg1").textContent = "Roll no length should be min 10 digit ";
+                        document.getElementById("msg1").style.color = "red";
+                    }
+                    document.getElementById("rn").textContent = roll; 
+                }
+            else {
+                document.getElementById("msg3").textContent = "Please enter correct roll no.or password";
+                document.getElementById("msg3").style.color = "red";
+            }
+        }
+
+        function removeMsg() {
+            let roll = document.getElementById('roll').value;
+            let password = document.getElementById('password').value;
+
+            if (roll != null && roll != "") {
+                document.getElementById("roll-error").textContent = "";
+            }
+            else {
+                document.getElementById("roll-error").textContent = "Please enter a valid Rollno";
+                document.getElementById("roll-error").style.color = "red";
+            }
+            if (password != null && password != "") {
+                document.getElementById("password-error").textContent = "";
+            }
+            else {
+                document.getElementById("password-error").textContent = "Please enter valid password";
+                document.getElementById("password-error").style.color = "red";
+            }
+        }
+    </script>
+</body>
+
+</html>
